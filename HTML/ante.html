@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable Lateral</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 22px;
+            color: #f1f1f1;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+            color: #f1f1f1;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            color: #f1f1f1;
+            cursor: pointer;
+        }
+        .openbtn {
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 20px;
+        }
+        .openbtn:hover {
+            background-color: #45a049;
+        }
+        #main {
+            transition: margin-left 0.5s;
+            padding: 20px;
+            margin-left: 0;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        p {
+            line-height: 1.6;
+            margin: 0 0 20px;
+        }
+        .code-block {
+            background-color: #282c34;
+            color: #f8f8f2;
+            border-radius: 5px;
+            padding: 15px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .code-block pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+        .code-block code {
+            display: block;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+  
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="ante.html"> Antecedentes</a>
+        <a href="etiq.html">Etiquetas</a>
+        <a href="texto.html">Texto</a>
+        <a href="lista.html">Listas</a>
+        <a href="tablas.html">Tablas</a>
+        <a href="imagen.html">Imagen</a>
+        <a href="video.html">Video</a>
+        <a href="audio.html">Audio</a>
+        <a href="imper.html">Hipervinculos</a>
+        <a href="formul.html">Formularios</a>
+        <a href="semanticas.html">Semanticos</a>
+        <a href="frames.html">Frames</a>
+        <a href="es_basica_pgweb.html">Extructura Basica de una Pagina HTML</a>
+        <a href="meta.html">Meta</a>
+        <a href="extras.html">Extras/Otras</a>
+    </div>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Abrir Menú</button>
+
+        <h1>La historia de HTML</h1>
+        <p>El HTML o Lenguaje de Marcas de Hipertexto es lo que da estructura y significado al contenido de una página web. Esto lo logra por medio de los hipertextos, conocidos como etiquetas. El hipertexto nos ayuda a conectar páginas web entre sí, ya sea dentro de un sitio o entre diferentes sitios web. Es importante recordar que los enlaces son un pilar esencial de la World Wide Web.</p>
+        <p>El lenguaje HTML nos da la oportunidad de tener una estructura lógica dentro de una web, tanto para máquinas como para seres humanos. Esto se logra por medio de una especie de árbol donde hay elemento que se ve como raíz y las etiquetas que se van insertando como si fueran las ramas. Lo mejor es que para crear un documento HTML sólo es necesario un editor de texto. El propio editor de notas es suficiente.</p>
+        <p>Conocer HTML definitivamente es indispensable para el desarrollo de una página web. Por eso, para crear nuestro propio sitio, es necesario contar con un desarrollador web.</p>
+
+        <h2>Historia del HTML</h2>
+        <p>La historia del HTML empieza en 1989 cuando el investigador Tim Berners-Lee lo inventa con el fin de compartir artículos científicos. La primera versión sólo contaba con 18 etiquetas para texto. Lo que lo hacía especial es que podía ligar varios documentos con el hipertexto. Todo esto se podía visualizar en un navegador llamado World Wide Web.</p>
+        <p>Posteriormente surge el Internet Engineering Task Force. Esto se volvió tan relevante que surgió el World Wide Web Consortium (W3C) en 1993, un organismo que determinó las reglas para el HTML.</p>
+        <p>En 1996 llegó la versión HTML 3.2 la cual ha sido una de las más completas y que ha marcado la historia del HTML hasta nuestros días.</p>
+        <p>Es importante mencionar que en este tiempo se utilizaba un navegador de nombre NSCA Mosaic. Posteriormente se lanzó la primera versión de Netscape, quien en unos cuantos meses era usado por la mayoría de los usuarios en internet.</p>
+        <p>En la evolución de internet jugaron un papel fundamental otros lenguajes de programación. La introducción de Java o JavaScript dio más forma a la segunda versión de HTML. Gracias a este lenguaje se podían implementar tablas, imágenes, tipografías e incluso colores. Posteriormente surgió el CSS (hojas de estilo en cascada) con el que se da estilo y forma a los textos.</p>
+        <p>En la tercera versión de HTML se incluyen las etiquetas específicas para los navegadores web como Internet Explorer. Sin embargo, esta decisión sólo causó caos y problemas. Por esta razón se decidió hacer un cambio hacia un estándar único.</p>
+        <p>En esta nueva versión se incluyeron etiquetas como <code>&lt;button&gt;</code>, <code>&lt;iframe&gt;</code>, y <code>&lt;form&gt;</code>. Es así que en la versión HTML 4.0 se agregan los botones y el iFrame para poder tener sitios dentro de otros sitios. En 2014 se desarrolló la quinta versión de HTML. Esta actualización llegó con un sin fin de audios, vídeos e inputs.</p>
+
+        <h2>¿Qué es y para qué sirve HTML?</h2>
+        <p>Ahora que tenemos presenta la historia es importante saber qué es y para qué sirve el HTML. Este concepto debe sonarte muy familiar ya que es uno de los pilares básicos de cualquier sitio. Aunque ya te hemos dado una definición es un poco complicado tenerlo claro.</p>
+        <p>Como te hemos comentado antes, el HTML es un lenguaje de programación. Pero para entender para qué sirve, es necesario tener claro qué son las etiquetas. Para ello imagínate que el sitio web es un cuento y las partes que tiene este cuento (planteamiento, nudo y desenlace) son las etiquetas. Estas etiquetas cumplirán una doble función:</p>
+        <ul>
+            <li>Ordenar nuestro sitio</li>
+            <li>Permitir que los motores de búsqueda nos encuentren</li>
+        </ul>
+        <p>Para identificarlas las etiquetas se deben colocar entre los siguientes caracteres: “<” y “>”. Ejemplo: <code>&lt;nombre de etiqueta&gt;</code>. Cuando queremos iniciar una etiqueta sólo debe seguirse esta regla.</p>
+        <p>Sin embargo, para una etiqueta de cierre es necesario introducir una diagonal (“/”) antes del texto. Ejemplo: <code>&lt;/nombre de etiqueta&gt;</code>. Por otro lado tenemos el código HTML el cual debe iniciar con una etiqueta HTML.</p>
+        <p>En el caso concreto de las imágenes debe colocarse el atributo <code>img src</code>. Este nos ayuda a indicar en dónde está alojada la imagen que vamos a mostrar. Ejemplo: <code>&lt;img src="x"&gt;</code>. En este caso “x” es el enlace en donde se encuentra la foto.</p>
+
+        <h2>Características de HTML</h2>
+        <p>Una de las características de HTML es la forma en que se divide la información. Esto es por medio de dos grandes bloques: el elemento HTML o <code>&lt;head&gt;</code> y el cuerpo o contenido.</p>
+        <p>En el elemento HTML se pueden incluir los siguientes casos:</p>
+        <ul>
+            <li>Meta datos. Esta puede ser información que le dé contexto a la página. Por ejemplo, nos sirve para indicar el idioma.</li>
+            <li>Referencia a ficheros. Aquí deben ir todos aquellos recursos que requiera nuestro sitio. Un ejemplo puede ser JavaScript y archivos CSS.</li>
+            <li>Scripts y estilos. En caso de que estos no sean incluidos en un fichero independiente se pueden incluir en la cabecera.</li>
+        </ul>
+        <p>Por su parte, en el cuerpo está todo el contenido de nuestra página. Es decir, desde el texto, imágenes, videos e incluso enlaces. Lo importante aquí es que todos estos elementos deben estar estructurados en secciones y marcado de forma correcta.</p>
+        <p>Este lenguaje de programación es un tema que puede traer mucha confusión, por ello te dejamos las respuestas a tres de las preguntas más frecuentes.</p>
+
+        <h2>¿Qué es un archivo con la extensión HTML?</h2>
+        <p>Un archivo con la extensión HTML es un tipo de archivo de lenguaje de marcado estándar de un sitio web. Estos sólo contienen texto y referencias a otros archivos externos, como CSS o vídeos.</p>
+
+        <h2>¿Cuál es la función de HTML?</h2>
+        <p>El HTML es utilizado para desarrollos web y la creación de sitios. Este se compone de ciertas etiquetas como hipervínculos, saltos de página y etiquetas de imágenes.</p>
+
+        <h2>¿Cuál es el objetivo de HTML?</h2>
+        <p>El HTML es un lenguaje de programación que permite mostrar archivos de forma estructurada. De igual forma permite incluir imágenes, gráficos, sonidos, vídeos y otro tipo de archivos multimedia.</p>
+        <p>A la hora de crear un sitio web es fundamental el manejo del lenguaje de programación HTML. En Serna Group contamos con un experto en diseño de páginas web en México. Consúltanos cualquier duda si necesitas una nueva página web o quieres hacer algún cambio en la tuya. Hoy más que nunca el internet tiene un papel fundamental en todas nuestras relaciones.</p>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+    
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable Lateral</title>
+    <style>
+       <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+        .openbtn:hover {
+            background-color: #45a049;
+        }
+        .openbtn-container {
+            margin: 20px;
+        }
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+        .example-section {
+            margin: 20px 0;
+        }
+        .example-section h2 {
+            color: #4CAF50;
+        }
+        .example-box {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+        h1, h2, h3 {
+            color: #4CAF50;
+        }
+        li{
+            font-size: 20px;
+        }
+        .example-box {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+  
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="ante.html"> Antecedentes</a>
+        <a href="etiq.html">Etiquetas</a>
+        <a href="texto.html">Texto</a>
+        <a href="lista.html">Listas</a>
+        <a href="tablas.html">Tablas</a>
+        <a href="imagen.html">Imagen</a>
+        <a href="video.html">Video</a>
+        <a href="audio.html">Audio</a>
+        <a href="imper.html">Hipervinculos</a>
+        <a href="formul.html">Formularios</a>
+        <a href="semanticas.html">Semanticos</a>
+        <a href="frames.html">Frames</a>
+        <a href="es_basica_pgweb.html">Extructura Basica de una Pagina HTML</a>
+        <a href="meta.html">Meta</a>
+        <a href="extras.html">Extras/Otras</a>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Abrir Menú</button>
+        <div class="example-box">
+        <h1>Etiquetas HTML (Sintaxis Básica)</h1>
+        <h2>¿Cuáles son las etiquetas HTML básicas?</h2>
+        <p>Las etiquetas HTML más utilizadas son:</p>
+        <ul>
+            <li><code>&lt;!DOCTYPE&gt;</code>: Se utiliza para especificar la versión de HTML que se está utilizando en la página.</li>
+            <li><code>&lt;html&gt;</code>: Define el inicio y el final de la página web.</li>
+            <li><code>&lt;head&gt;</code>: Define la sección de encabezado de la página, donde se incluyen elementos como el título de la página, metaetiquetas, scripts, entre otros.</li>
+            <li><code>&lt;title&gt;</code>: Define el título de la página web que aparece en la pestaña del navegador.</li>
+            <li><code>&lt;body&gt;</code>: Define la sección del cuerpo de la página web, donde se incluyen todos los elementos que se mostrarán en la página.</li>
+            <li><code>&lt;h1&gt; a &lt;h6&gt;</code>: Define los encabezados o títulos de diferentes niveles de jerarquía en la página web.</li>
+            <li><code>&lt;a&gt;</code>: Define un enlace que el usuario puede hacer clic para ir a otra página web o a una sección diferente de la misma página.</li>
+            <li><code>&lt;img&gt;</code>: Define una imagen que se mostrará en la página web.</li>
+            <li><code>&lt;p&gt;</code>: Define un párrafo de texto.</li>
+            <li><code>&lt;b&gt;</code>: Esta etiqueta dará formato de negrita a cualquier texto que se encuentre entre las etiquetas de apertura y cierre.</li>
+            <li><code>&lt;i&gt;</code>: Esta etiqueta formateará como cursiva cualquier texto entre las etiquetas de apertura y cierre.</li>
+            <li><code>&lt;u&gt;</code>: Esta etiqueta formateará cualquier texto entre las etiquetas de apertura y cierre como subrayado.</li>
+        </ul>
+    </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+
+</body>
+</html>

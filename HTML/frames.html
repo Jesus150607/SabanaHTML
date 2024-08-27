@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Básico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+        .openbtn:hover {
+            background-color: #45a049;
+        }
+        .openbtn-container {
+            margin: 20px;
+        }
+        #main {
+            transition: margin-left 0.5s;
+            padding: 16px;
+        }
+        .example-box {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+        .openbtn:hover {
+            background-color: #45a049;
+        }
+        .openbtn-container {
+            margin: 20px;
+        }
+        .example-section {
+            margin: 20px;
+        }
+        .example-section h2 {
+            color: #4CAF50;
+        }
+        .example-box {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="ante.html"> Antecedentes</a>
+        <a href="etiq.html">Etiquetas</a>
+        <a href="texto.html">Texto</a>
+        <a href="lista.html">Listas</a>
+        <a href="tablas.html">Tablas</a>
+        <a href="imagen.html">Imagen</a>
+        <a href="video.html">Video</a>
+        <a href="audio.html">Audio</a>
+        <a href="imper.html">Hipervinculos</a>
+        <a href="formul.html">Formularios</a>
+        <a href="semanticas.html">Semanticos</a>
+        <a href="frames.html">Frames</a>
+        <a href="es_basica_pgweb.html">Extructura Basica de una Pagina HTML</a>
+        <a href="meta.html">Meta</a>
+        <a href="extras.html">Extras/Otras</a>
+    </div>
+    <div id="main">
+        <div class="openbtn-container">
+            <button class="openbtn" onclick="openNav()">☰ Abrir Menú</button>
+        </div>
+        <center>
+   <div class="example-box">
+    <h1>Ejemplos de HTML</h1>
+
+    <div class="example-section" id="basic-tags">
+        <h2>Etiquetas Básicas de HTML</h2>
+        <p>Estas son algunas de las etiquetas básicas de HTML con ejemplos:</p>
+        <div class="example-box">
+            <h3>&lt;html&gt; y &lt;body&gt;</h3>
+            <pre>&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Título&lt;/h1&gt;
+    &lt;p&gt;Un párrafo de texto.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+        </div>
+        <div class="example-box">
+            <h3>&lt;a&gt; (Enlace)</h3>
+            <pre>&lt;a href="https://www.example.com"&gt;Este es un enlace&lt;/a&gt;</pre>
+        </div>
+        <div class="example-box">
+            <h3>&lt;img&gt; (Imagen)</h3>
+            <pre>&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;</pre>
+        </div>
+        <div class="example-box">
+            <h3>&lt;table&gt; (Tabla)</h3>
+            <pre>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Encabezado&lt;/th&gt;
+    &lt;th&gt;Encabezado&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Celda&lt;/td&gt;
+    &lt;td&gt;Celda&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre>
+        </div>
+    </div>
+
+    <div class="example-section" id="frames-example">
+        <h2>Ejemplo de Frames</h2>
+        <p>Los marcos (frameset) definen la organización de los marcos dentro de la ventana del usuario. Este ejemplo es para fines educativos, ya que el uso de frames está obsoleto en HTML5.</p>
+        <div class="example-box">
+            <h3>Ejemplo de Código para Frames</h3>
+            <pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+    "http://www.w3.org/TR/html4/frameset.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Un documento simple con marcos&lt;/title&gt;
+&lt;/head&gt;
+&lt;frameset rows="20%,80%"&gt;
+  &lt;frameset cols="20%, 80%"&gt;
+    &lt;frame src="http://developer.mozilla.org/wiki-images/firefoxlogo.png"&gt;
+    &lt;frame src="http://html.conclase.net/w3c/html401.dtd.html#frame"&gt;
+  &lt;/frameset&gt;
+  &lt;frame src="http://html.conclase.net/w3c/html401.dtd.html#edef-FRAME"&gt;
+&lt;/frameset&gt;
+&lt;/html&gt;</pre>
+        </div>
+   
+
+    </div>
+    </div>
+</center>
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>

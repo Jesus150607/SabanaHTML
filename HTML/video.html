@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable Lateral</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }s
+        .openbtn:hover {
+            background-color: #45a049;
+        }
+        .openbtn-container {
+            margin: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .gallery-item {
+            flex: 1;
+            min-width: 250px;
+            max-width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .gallery-item p {
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+        }
+        .code-block {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+        .code-block pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="ante.html"> Antecedentes</a>
+        <a href="etiq.html">Etiquetas</a>
+        <a href="texto.html">Texto</a>
+        <a href="lista.html">Listas</a>
+        <a href="tablas.html">Tablas</a>
+        <a href="imagen.html">Imagen</a>
+        <a href="video.html">Video</a>
+        <a href="audio.html">Audio</a>
+        <a href="imper.html">Hipervinculos</a>
+        <a href="formul.html">Formularios</a>
+        <a href="semanticas.html">Semanticos</a>
+        <a href="frames.html">Frames</a>
+        <a href="es_basica_pgweb.html">Extructura Basica</a>
+        <a href="meta.html">Meta</a>
+        <a href="extras.html">Extras/Otras</a>
+    </div>
+    <div id="main">
+        <div class="openbtn-container">
+            <button class="openbtn" onclick="openNav()">☰ Abrir Menú</button>
+        </div>
+    </div>
+<h1>Videos en HTML</h1>
+
+<div class="gallery">
+    <div class="gallery-item">
+       <video controls width="400" height="400" autoplay src="/actividades/imagenes/video.mp4"  ></video>
+        <p>Descripcion del video </p>
+    </div>
+    <H1>Ejemplo de Codigo HTML</H1>
+    <div class="code-block">
+        <pre><code>
+&lt;video src="https://via.placeholder.com/400x300" width="640" height="360" controls &gt;
+&lt;!--Aquí iran las fuentes de video y el textpo que desees --> &gt;&lt;video/&gt;
+</code></pre>
+    </div>
+<h1>Video Derectamente de YOUTUBE</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ud0OVg8Uuyw?si=BqRhRdRw0oNytxwl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<H1>Ejemplo de Codigo HTML</H1>
+    <div class="code-block">
+        <pre><code>
+&lt;iframe  width="640" height="360" src="https://www.youtube.com/embed/ud0OVg8Uuyw?si=BqRhRdRw0oNytxwl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen &gt;
+lt;iframe/&gt;
+</code></pre>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+
+</body>
+</html>

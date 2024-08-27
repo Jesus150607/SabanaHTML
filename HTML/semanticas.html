@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable Lateral con Ejemplos Semánticos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            color: #818181;
+            margin-left: 50px;
+        }
+        .sidebar .closebtn:hover {
+            color: #f1f1f1;
+        }
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+        .openbtn:hover {
+            background-color: #45a049;
+        }
+        .openbtn-container {
+            margin: 20px;
+        }
+        #main {
+            margin-left: 260px; /* Adjust this value to make room for the sidebar */
+            padding: 20px;
+        }
+        .section {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        header, footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="ante.html"> Antecedentes</a>
+        <a href="etiq.html">Etiquetas</a>
+        <a href="texto.html">Texto</a>
+        <a href="lista.html">Listas</a>
+        <a href="tablas.html">Tablas</a>
+        <a href="imagen.html">Imagen</a>
+        <a href="video.html">Video</a>
+        <a href="audio.html">Audio</a>
+        <a href="imper.html">Hipervinculos</a>
+        <a href="formul.html">Formularios</a>
+        <a href="semanticas.html">Semanticos</a>
+        <a href="frames.html">Frames</a>
+        <a href="es_basica_pgweb.html">Extructura Basica de una Pagina HTML</a>
+        <a href="meta.html">Meta</a>
+        <a href="extras.html">Extras/Otras</a>
+    </div>
+
+    <!-- Main content -->
+    <div id="main">
+        <!-- Header -->
+        <header>
+            <h1>Mi Sitio Web</h1>
+            <p>Bienvenido a mi sitio web. Aquí puedes encontrar información sobre varios temas.</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <button class="openbtn" onclick="openNav()">☰ Abrir Menú</button>
+        </nav>
+
+        <!-- Main Section -->
+        <main>
+            <!-- Section 1 -->
+            <section id="section1" class="section">
+                <h2>Sección 1</h2>
+                <p>Contenido de la Sección 1. Aquí puedes poner información relevante para esta sección.</p>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="section2" class="section">
+                <h2>Sección 2</h2>
+                <p>Contenido de la Sección 2. Aquí puedes poner información relevante para esta sección.</p>
+            </section>
+
+            <!-- Article -->
+            <article id="article1" class="section">
+                <h2>Artículo Destacado</h2>
+                <p>Este es un artículo destacado que proporciona información importante o interesante sobre un tema específico.</p>
+            </article>
+
+            <!-- Section 3 -->
+            <section id="section3" class="section">
+                <h2>Sección 3</h2>
+                <p>Contenido de la Sección 3. Aquí puedes poner información relevante para esta sección.</p>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+
+</body>
+</html>

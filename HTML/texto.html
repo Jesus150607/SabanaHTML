@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Básico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+        .openbtn:hover {
+            background-color: #45a049;
+        }
+        .openbtn-container {
+            margin: 20px;
+        }
+        #main {
+            transition: margin-left 0.5s;
+            padding: 16px;
+        }
+        .example-box {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="ante.html"> Antecedentes</a>
+        <a href="etiq.html">Etiquetas</a>
+        <a href="texto.html">Texto</a>
+        <a href="lista.html">Listas</a>
+        <a href="tablas.html">Tablas</a>
+        <a href="imagen.html">Imagen</a>
+        <a href="video.html">Video</a>
+        <a href="audio.html">Audio</a>
+        <a href="imper.html">Hipervinculos</a>
+        <a href="formul.html">Formularios</a>
+        <a href="semanticas.html">Semanticos</a>
+        <a href="frames.html">Frames</a>
+        <a href="es_basica_pgweb.html">Extructura Basica de una Pagina HTML</a>
+        <a href="meta.html">Meta</a>
+        <a href="extras.html">Extras/Otras</a>
+    </div>
+    <div id="main">
+        <div class="openbtn-container">
+            <button class="openbtn" onclick="openNav()">☰ Abrir Menú</button>
+        </div>
+        <center>
+   <div class="example-box">
+        <h1>TEXTO DE HTML</h1>
+        <p>HTML (HyperText Markup Language) es el lenguaje de marcado estándar para crear páginas web. HTML utiliza una serie de elementos o etiquetas para estructurar el contenido en la web.</p>
+
+        
+
+        <h2>Etiquetas Comunes</h2>
+        <p>Algunas etiquetas HTML comunes incluyen:</p>
+        
+          <P>  <li><strong>&lt;p&gt;</strong>: Define un párrafo.</li></P>
+           <a href=""> <li><strong>&lt;a&gt;</strong>: Define un enlace.</li></a>
+            <h1><li><strong>&lt;h1&gt; a &lt;h6&gt;</strong>: Define encabezados de diferentes niveles.</li></h1>
+           
+        
+
+        <h2>Ejemplos de Etiquetas</h2>
+        <h3>Encabezados</h3>
+        <p>Hay seis niveles de encabezados en HTML:</p>
+        <h1><pre><code>&lt;h1&gt;Este es un encabezado de nivel 1&lt;/h1&gt;</code></pre></h1>
+        <h2><pre><code>&lt;h2&gt;Este es un encabezado de nivel 2&lt;/h2&gt;</code></pre></h2>
+        <h3><pre><code>&lt;h3&gt;Este es un encabezado de nivel 3&lt;/h3&gt;</code></pre></h3>
+      
+
+        <h3>Párrafos</h3>
+        <p><pre><code>&lt;p&gt;Este es un párrafo.&lt;/p&gt;</code></pre></p>
+
+        <h3>Enlaces</h3>
+        <pre><code>&lt;a href="https://www.ejemplo.com"&gt;Este es un enlace&lt;/a&gt;</code></pre>
+
+        <h3>Negritas</h3>
+        <pre><code>&lt;strong"&gt;Este es un enlace&lt;/strong&gt;</code></pre>
+
+        <h3>Cursiva</h3>
+        <pre><code>&lt;cursiva"&gt;Este es un enlace&lt;/cursiva&gt;</code></pre>
+
+    </div>
+    </div>
+</center>
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>
